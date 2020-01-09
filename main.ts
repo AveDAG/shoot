@@ -20,7 +20,6 @@ function projectile () {
     projectile2.setPosition(0, Math.randomRange(0, 120))
 }
 function player () {
-    player_awesome.setPosition(78, 101)
     player_awesome = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -56,11 +55,11 @@ function player () {
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
     controller.moveSprite(player_awesome, 100, 100)
+    player_awesome.setPosition(78, 101)
 }
 let player_awesome: Sprite = null
 let projectile2: Sprite = null
 player()
-projectile()
 game.onUpdate(function () {
-	
+    projectile()
 })
